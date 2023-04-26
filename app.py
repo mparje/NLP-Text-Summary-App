@@ -56,9 +56,9 @@ def main():
 
     if file_uploaded is not None:
         pdf_reader = PyPDF2.PdfReader(file_uploaded)
-            full_text = ""
-            for page in range(len(pdf_reader.pages)):
-            full_text += pdf_reader.pages[page].extractText()
+    full_text = ""
+    for page in range(len(pdf_reader.pages)):
+        full_text += pdf_reader.pages[page].extractText()
 
         # Sidebar Menu
         options = ["Español"]
