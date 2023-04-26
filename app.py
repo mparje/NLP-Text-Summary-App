@@ -57,7 +57,7 @@ def main():
     if file_uploaded is not None:
         pdf_reader = PyPDF2.PdfReader(file_uploaded)
         full_text = ""
-        for page in range(len(reader.pages)):
+        for page in range(len(pdf_reader.pages)):
             full_text += pdf_reader.getPage(page).extractText()
 
         # Sidebar Menu
