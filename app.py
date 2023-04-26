@@ -58,7 +58,7 @@ def main():
         pdf_reader = PyPDF2.PdfReader(file_uploaded)
         full_text = ""
         for page in range(len(pdf_reader.pages)):
-            full_text += pdf_reader.Page(page).extractText()
+            full_text += pdf_reader.pages[page_number].extractText()
 
         # Sidebar Menu
         options = ["Español"]
